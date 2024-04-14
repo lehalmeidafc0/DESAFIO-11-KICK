@@ -3,31 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimaTempo</title>
     <link rel="stylesheet" href="style.css">
-    <title>Previsão Do Tempo </title>
 </head>
 
 <body>
-    <div class="caixa-maior">
+    <h1> Clima Tempo </h1>
 
-        <input class="input-cidade" placeholder="Digite a cidade">
+    <form class="busca">
+        <input type="search" id="searchInput" placeholder="Insira sua cidade">
+        <button>Buscar</button>
+    </form>
 
-        <button onclick="cliqueiNoBotao()">
-            <img class="lupa" src="https://www.svgrepo.com/show/488200/find.svg">
-        </button>
-
-        <div class="caixa-media">
-            <h2 class="cidade">Tempo em Diadema</h2>
-
-            <p class="temp">24°C</p>
-
-            <img class="icone" src="https://openweathermap.org/img/wn/04n.png">
-    
-            <p class="umidade">Umidade: 72%</p>
+    <div class="resultado">
+        <div class="titulo">--</div>
+        <div class="info">
+            <div class="temp">
+                <div class="tempTitulo"> Temperatura </div>
+                <div class="tempInfo">-- <sup>ºC</sup></div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather">
+            </div>
+            <div class="vento">
+                <div class="ventoTitulo"> Vento </div>
+                <div class="ventoInfo">-- <span>km/h</span></div>
+                <div class="ventoArea">
+                    <div class="ventoPonto" style="transform: rotate(0deg);"></div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="aviso"></div>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
 </body>
-<script src="./script.js"></script>
 
 </html>
